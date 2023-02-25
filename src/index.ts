@@ -7,7 +7,7 @@ import {
 	verifyKey,
 } from "discord-interactions";
 
-import "env" from "./lib/env.js";
+import env from "./lib/env.js";
 
 class JsonResponse extends Response {
 	// @ts-ignore
