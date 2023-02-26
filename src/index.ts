@@ -60,13 +60,13 @@ router.post("/discord", async (request, env) => {
 router.all("*", () => new Response("404 | Not Found.", { status: 404 }));
 
 export default {
-	async fetch(request: Request, env: any) {
+	async fetch(request: Request, _env = env) {
 		if (request.method === "POST") {
 			const isValidRequest = verifyKey(
 				await request.clone().arrayBuffer(),
 				request["headers"].get("x-signature-ed25519") ?? "",
 				request["headers"].get("x-signature-timestamp") ?? "",
-				env.DISCORD_PUBLIC_KEY
+				_env.DISCORD_PUBLIC_KEY
 			);
 
 			if (!isValidRequest) {
