@@ -1,5 +1,6 @@
 import { Router } from "itty-router";
 import { Request, Response } from "@cloudflare/workers-types";
+import type { ResponseInit } from "@cloudflare/workers-types";
 
 import {
 	InteractionResponseType,
@@ -10,10 +11,9 @@ import {
 import env from "./lib/env.js";
 
 class JsonResponse extends Response {
-	// @ts-ignore
 	constructor(
-		body: any,
-		init: any = {
+		body: unknown,
+		init: ResponseInit = {
 			headers: {
 				"content-type": "application/json;charset=UTF-8",
 			},
