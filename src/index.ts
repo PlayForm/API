@@ -38,7 +38,7 @@ router.post("/discord", async (request, env) => {
 		switch (message.data.name.toLowerCase()) {
 			case "invite": {
 				return new JsonResponse({
-					// rome-ignore lint/nursery/noPrecisionLoss:
+
 					type: 4,
 					data: {
 						content: `https://discord.com/oauth2/authorize?client_id=${env.DISCORD_APPLICATION_ID}&scope=applications.commands`,
