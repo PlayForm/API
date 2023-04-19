@@ -1,16 +1,16 @@
-import { Router } from "itty-router";
-import { Request, Response } from "@cloudflare/workers-types";
 import type { ResponseInit } from "@cloudflare/workers-types";
+import { Request, Response } from "@cloudflare/workers-types";
 import {
-	InteractionResponseType,
-	InteractionType,
-	verifyKey,
+    InteractionResponseType,
+    InteractionType,
+    verifyKey,
 } from "discord-interactions";
+import { Router } from "itty-router";
 import env from "./lib/env.js";
 
 class JsonResponse extends Response {
 	constructor(
-		body: unknown,
+		body: any,
 		init: ResponseInit = {
 			headers: {
 				"content-type": "application/json;charset=UTF-8",
