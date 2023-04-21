@@ -5,7 +5,7 @@
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"scripts": {
-		"build": "lightrix build src/*.ts src/*/*.ts",
+		"build": "lightrix build 'src/**/*.ts'",
 		"dev": "wrangler dev"
 	},
 	"dependencies": {
