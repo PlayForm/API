@@ -1,9 +1,9 @@
 import type { ResponseInit } from "@cloudflare/workers-types";
 import { Request, Response } from "@cloudflare/workers-types";
 import {
-    InteractionResponseType,
-    InteractionType,
-    verifyKey,
+	InteractionResponseType,
+	InteractionType,
+	verifyKey,
 } from "discord-interactions";
 import { Router } from "itty-router";
 import env from "./lib/env.js";
@@ -36,7 +36,6 @@ router.post("/discord", async (request, env) => {
 		switch (message.data.name.toLowerCase()) {
 			case "invite": {
 				return new JsonResponse({
-
 					type: 4,
 					data: {
 						content: `https://discord.com/oauth2/authorize?client_id=${env.DISCORD_APPLICATION_ID}&scope=applications.commands`,
