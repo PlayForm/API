@@ -9,13 +9,13 @@
 		"prepublishOnly": "lightrix build 'src/**/*.ts'"
 	},
 	"dependencies": {
-		"@lightrix/config": "0.0.11",
-		"@lightrix/scripts": "1.0.3",
 		"@nikolarhristov/bot": "0.0.1",
 		"itty-router": "3.0.12"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20230518.0",
+		"@lightrix/config": "0.0.11",
+		"@lightrix/scripts": "1.0.3",
 		"wrangler": "3.0.1"
 	}
 }
