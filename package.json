@@ -10,7 +10,7 @@
 	},
 	"dependencies": {
 		"@nikolarhristov/bot": "0.0.1",
-		"itty-router": "4.0.7"
+		"itty-router": "4.0.9"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20230518.0",
