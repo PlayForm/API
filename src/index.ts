@@ -10,6 +10,7 @@ import env from "./lib/env.js";
 
 class JsonResponse extends Response {
 	constructor(
+		// rome-ignore lint/suspicious/noExplicitAny:
 		body: any,
 		init: ResponseInit = {
 			headers: {
