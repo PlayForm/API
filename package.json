@@ -15,7 +15,7 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20230518.0",
 		"@lightrix/config": "0.0.11",
-		"@lightrix/scripts": "1.0.4",
+		"@lightrix/scripts": "1.0.5",
 		"wrangler": "3.1.1"
 	}
 }
