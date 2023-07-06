@@ -10,12 +10,12 @@
 	},
 	"dependencies": {
 		"@nikolarhristov/bot": "0.0.1",
-		"itty-router": "4.0.13"
+		"itty-router": "4.0.14"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20230518.0",
 		"@lightrix/config": "0.0.11",
-		"@lightrix/scripts": "1.0.5",
+		"@lightrix/scripts": "1.0.6",
 		"wrangler": "3.1.1"
 	}
 }
