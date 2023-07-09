@@ -16,7 +16,7 @@ class JsonResponse extends Response {
 			headers: {
 				"content-type": "application/json;charset=UTF-8",
 			},
-		}
+		},
 	) {
 		super(JSON.stringify(body), init);
 	}
@@ -46,10 +46,7 @@ router.post("/discord", async (request, env) => {
 			}
 
 			default:
-				return new JsonResponse(
-					{ error: "Unknown Type" },
-					{ status: 400 }
-				);
+				return new JsonResponse({ error: "Unknown Type" }, { status: 400 });
 		}
 	}
 
@@ -65,7 +62,7 @@ export default {
 				await request.clone().arrayBuffer(),
 				request["headers"].get("x-signature-ed25519") ?? "",
 				request["headers"].get("x-signature-timestamp") ?? "",
-				_env.DISCORD_PUBLIC_KEY
+				_env.DISCORD_PUBLIC_KEY,
 			);
 
 			if (!isValidRequest) {
