@@ -1,4 +1,13 @@
 {
+	"name": "@nikolarhristov/api",
+	"version": "0.0.1",
+	"license": "MIT",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"scripts": {
+		"dev": "wrangler dev",
+		"prepublishOnly": "lightrix build 'src/**/*.ts'"
+	},
 	"dependencies": {
 		"@nikolarhristov/bot": "0.0.1",
 		"itty-router": "4.0.14"
@@ -8,14 +17,5 @@
 		"@lightrix/config": "0.0.11",
 		"@lightrix/scripts": "1.0.6",
 		"wrangler": "3.1.2"
-	},
-	"license": "MIT",
-	"main": "./dist/index.js",
-	"name": "@nikolarhristov/api",
-	"scripts": {
-		"dev": "wrangler dev",
-		"prepublishOnly": "lightrix build 'src/**/*.ts'"
-	},
-	"types": "./dist/index.d.ts",
-	"version": "0.0.1"
+	}
 }
