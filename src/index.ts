@@ -1,10 +1,10 @@
+import type { ResponseInit } from "@cloudflare/workers-types";
+import { Request, Response } from "@cloudflare/workers-types";
 import {
 	InteractionResponseType,
 	InteractionType,
 	verifyKey,
 } from "discord-interactions";
-import type { ResponseInit } from "@cloudflare/workers-types";
-import { Request, Response } from "@cloudflare/workers-types";
 import { Router } from "itty-router";
 import env from "./lib/env.js";
 
