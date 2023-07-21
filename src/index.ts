@@ -8,7 +8,7 @@ import {
 import { Router } from "itty-router";
 import env from "./lib/env.js";
 
-class JsonResponse extends Response {
+class JSONResponse extends Response {
 	constructor(
 		// rome-ignore lint/suspicious/noExplicitAny:
 		body: any,
@@ -28,7 +28,7 @@ router.post("/discord", async (request, env) => {
 	const message = await request["json"]();
 
 	if (message.type === InteractionType.PING) {
-		return new JsonResponse({
+		return new JSONResponse({
 			type: InteractionResponseType.PONG,
 		});
 	}
@@ -36,7 +36,7 @@ router.post("/discord", async (request, env) => {
 	if (message.type === InteractionType.APPLICATION_COMMAND) {
 		switch (message.data.name.toLowerCase()) {
 			case "invite": {
-				return new JsonResponse({
+				return new JSONResponse({
 					type: 4,
 					data: {
 						content: `https://discord.com/oauth2/authorize?client_id=${env.DISCORD_APPLICATION_ID}&scope=applications.commands`,
@@ -46,14 +46,14 @@ router.post("/discord", async (request, env) => {
 			}
 
 			default:
-				return new JsonResponse(
+				return new JSONResponse(
 					{ error: "Unknown Type" },
 					{ status: 400 }
 				);
 		}
 	}
 
-	return new JsonResponse({ error: "Unknown Type" }, { status: 400 });
+	return new JSONResponse({ error: "Unknown Type" }, { status: 400 });
 });
 
 router.all("*", () => new Response("404 | Not Found.", { status: 404 }));
