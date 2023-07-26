@@ -13,7 +13,7 @@
 		"itty-router": "4.0.14"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "4.20230717.1",
+		"@cloudflare/workers-types": "4.20230724.0",
 		"@lightrix/config": "0.0.11",
 		"@lightrix/scripts": "1.0.7",
 		"wrangler": "3.3.0"
