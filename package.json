@@ -2,7 +2,7 @@
 	"name": "@nikolarhristov/api",
 	"version": "0.0.1",
 	"license": "MIT",
-	"main": "./dist/index.js",
+	"main": "./dist/Index.js",
 	"types": "./dist/index.d.ts",
 	"scripts": {
 		"dev": "wrangler dev",
