@@ -6,7 +6,7 @@ import {
 import { Router } from "itty-router";
 import type { ResponseInit } from "@cloudflare/workers-types";
 import { Request, Response } from "@cloudflare/workers-types";
-import env from "./lib/env.js";
+import Environment from "./lib/Environment.js";
 
 class JSONResponse extends Response {
 	constructor(
@@ -59,7 +59,7 @@ router.post("/discord", async (request, env) => {
 router.all("*", () => new Response("404 | Not Found.", { status: 404 }));
 
 export default {
-	async fetch(request: Request, _env = env) {
+	async fetch(request: Request, _env = Environment) {
 		if (request.method === "POST") {
 			const isValidRequest = verifyKey(
 				await request.clone().arrayBuffer(),
@@ -74,6 +74,6 @@ export default {
 			}
 		}
 
-		return router.handle(request, env);
+		return router.handle(request, Environment);
 	},
 };
