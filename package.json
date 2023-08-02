@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"license": "MIT",
 	"main": "./dist/Index.js",
-	"types": "./dist/index.d.ts",
+	"types": "./dist/Index.d.ts",
 	"scripts": {
 		"dev": "wrangler dev",
 		"prepublishOnly": "lightrix build 'src/**/*.ts'"
