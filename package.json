@@ -6,7 +6,7 @@
 	"types": "./dist/Index.d.ts",
 	"scripts": {
 		"dev": "wrangler dev",
-		"prepublishOnly": "lightrix build 'src/**/*.ts'"
+		"prepublishOnly": "lightrix build 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"@nikolarhristov/bot": "0.0.1",
