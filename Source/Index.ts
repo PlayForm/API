@@ -6,7 +6,7 @@ import {
 import { Router } from "itty-router";
 import type { ResponseInit } from "@cloudflare/workers-types";
 import { Request, Response } from "@cloudflare/workers-types";
-import Environment from "./Lib/Environment.js";
+import Environment from "./Library/Environment.js";
 
 class JSONResponse extends Response {
 	constructor(
