@@ -1,4 +1,4 @@
 name = "api"
-main = "src/index.ts"
+main = "src/Index.ts"
 compatibility_date = "2023-02-24"
 send_metrics = false
