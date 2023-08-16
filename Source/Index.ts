@@ -1,11 +1,11 @@
+import type { ResponseInit } from "@cloudflare/workers-types";
+import { Request, Response } from "@cloudflare/workers-types";
 import {
 	InteractionResponseType,
 	InteractionType,
 	verifyKey,
 } from "discord-interactions";
 import { Router } from "itty-router";
-import type { ResponseInit } from "@cloudflare/workers-types";
-import { Request, Response } from "@cloudflare/workers-types";
 import Environment from "./Library/Environment.js";
 
 class JSONResponse extends Response {
