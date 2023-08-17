@@ -1,6 +1,6 @@
 {
 	"name": "@nikolarhristov/api",
-	"version": "2.0.0",
+	"version": "0.0.1",
 	"license": "MIT",
 	"main": "./Target/Index.js",
 	"types": "./Target/Index.d.ts",
