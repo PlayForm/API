@@ -1,7 +1,14 @@
 {
 	"name": "@nikolarhristov/api",
 	"version": "0.0.1",
+	"private": "false",
 	"license": "MIT",
+	"author": {
+		"name": "Nikola Hristov",
+		"email": "nikola@nikolahristov.tech",
+		"url": "https://nikolahristov.tech"
+	},
+	"type": "module",
 	"main": "./Target/Index.js",
 	"types": "./Target/Index.d.ts",
 	"scripts": {
@@ -15,5 +22,8 @@
 		"@cloudflare/workers-types": "4.20230814.0",
 		"typescript-esbuild": "0.1.13",
 		"wrangler": "3.5.1"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
