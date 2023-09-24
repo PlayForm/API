@@ -1,12 +1,8 @@
-import type { ResponseInit } from "@cloudflare/workers-types";
-import { Request, Response } from "@cloudflare/workers-types";
-import {
-	InteractionResponseType,
-	InteractionType,
-	verifyKey,
-} from "discord-interactions";
-import { Router } from "itty-router";
-import Environment from "./Library/Environment.js";
+import type { Request, ResponseInit } from "@cloudflare/workers-types";
+
+export const { default: Environment } = await import("./Object/Environment.js");
+
+export const { Response } = await import("@cloudflare/workers-types");
 
 class JSONResponse extends Response {
 	constructor(
@@ -22,24 +18,33 @@ class JSONResponse extends Response {
 	}
 }
 
-const router = Router();
+(await import("itty-router")).Router().post("/discord", async (Request) => {
+	const Message = await Request["json"]();
 
-router.post("/discord", async (request, env) => {
-	const message = await request["json"]();
-
-	if (message.type === InteractionType.PING) {
+	if (
+		Message.type ===
+		(await import("discord-interactions")).InteractionType.PING
+	) {
 		return new JSONResponse({
-			type: InteractionResponseType.PONG,
+			type: (await import("discord-interactions")).InteractionResponseType
+				.PONG,
 		});
 	}
 
-	if (message.type === InteractionType.APPLICATION_COMMAND) {
-		switch (message.data.name.toLowerCase()) {
+	if (
+		Message.type ===
+		(await import("discord-interactions")).InteractionType
+			.APPLICATION_COMMAND
+	) {
+		switch (Message.data.name.toLowerCase()) {
 			case "invite": {
 				return new JSONResponse({
 					type: 4,
 					data: {
-						content: `https://discord.com/oauth2/authorize?client_id=${env.DISCORD_APPLICATION_ID}&scope=applications.commands`,
+						content: `https://discord.com/oauth2/authorize?client_id=${
+							Environment.parse(process.env)
+								.DISCORD_APPLICATION_ID
+						}&scope=applications.commands`,
 						flags: 64,
 					},
 				});
@@ -56,16 +61,23 @@ router.post("/discord", async (request, env) => {
 	return new JSONResponse({ error: "Unknown Type" }, { status: 400 });
 });
 
-router.all("*", () => new Response("404 | Not Found.", { status: 404 }));
+(await import("itty-router"))
+	.Router()
+	.all("*", () => new Response("404 | Not Found.", { status: 404 }));
 
 export default {
-	async fetch(request: Request, _env = Environment) {
+	async fetch(
+		request: Request,
+		{ DISCORD_PUBLIC_KEY } = Environment.parse(process.env)
+	) {
 		if (request.method === "POST") {
-			const isValidRequest = verifyKey(
+			const isValidRequest = (
+				await import("discord-interactions")
+			).verifyKey(
 				await request.clone().arrayBuffer(),
 				request["headers"].get("x-signature-ed25519") ?? "",
 				request["headers"].get("x-signature-timestamp") ?? "",
-				_env.DISCORD_PUBLIC_KEY
+				DISCORD_PUBLIC_KEY
 			);
 
 			if (!isValidRequest) {
@@ -74,6 +86,6 @@ export default {
 			}
 		}
 
-		return router.handle(request, Environment);
+		return (await import("itty-router")).Router().handle(request);
 	},
 };
