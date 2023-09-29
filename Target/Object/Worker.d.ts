@@ -1,3 +1,13 @@
+declare const _default: {
+    fetch(request: Request, { DISCORD_PUBLIC_KEY }?: {
+        DISCORD_APPLICATION_ID: string;
+        DISCORD_CLIENT_ID: string;
+        DISCORD_CLIENT_SECRET: string;
+        DISCORD_PUBLIC_KEY: string;
+        DISCORD_TOKENS: string;
+    }): Promise<any>;
+};
+export default _default;
 import type { Request } from "@cloudflare/workers-types";
 export declare const Environment: import("zod").ZodObject<{
     DISCORD_APPLICATION_ID: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
@@ -19,13 +29,3 @@ export declare const Environment: import("zod").ZodObject<{
     DISCORD_TOKENS?: string | undefined;
 }>;
 export declare const Response: typeof import("@cloudflare/workers-types").Response;
-declare const _default: {
-    fetch(request: Request, { DISCORD_PUBLIC_KEY }?: {
-        DISCORD_APPLICATION_ID: string;
-        DISCORD_CLIENT_ID: string;
-        DISCORD_CLIENT_SECRET: string;
-        DISCORD_PUBLIC_KEY: string;
-        DISCORD_TOKENS: string;
-    }): Promise<any>;
-};
-export default _default;

@@ -9,8 +9,8 @@
 		"url": "https://nikolahristov.tech"
 	},
 	"type": "module",
-	"main": "./Target/Index.js",
-	"types": "./Target/Index.d.ts",
+	"main": "./Target/Object/Worker.js",
+	"types": "./Target/Object/Worker.d.ts",
 	"scripts": {
 		"dev": "wrangler dev",
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"

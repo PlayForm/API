@@ -1,9 +1,3 @@
-import type { Request, ResponseInit } from "@cloudflare/workers-types";
-
-export const { default: Environment } = await import("./Object/Environment.js");
-
-export const { Response } = await import("@cloudflare/workers-types");
-
 class JSONResponse extends Response {
 	constructor(
 		// rome-ignore lint/suspicious/noExplicitAny:
@@ -89,3 +83,9 @@ export default {
 		return (await import("itty-router")).Router().handle(request);
 	},
 };
+
+import type { Request, ResponseInit } from "@cloudflare/workers-types";
+
+export const { default: Environment } = await import("./Environment.js");
+
+export const { Response } = await import("@cloudflare/workers-types");
