@@ -20,7 +20,11 @@
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20230922.0",
+<<<<<<< HEAD
 		"typescript-esbuild": "0.2.1",
+=======
+		"typescript-esbuild": "0.1.16",
+>>>>>>> 5620167a1137d6326972deada1dbee99ab791dd0
 		"wrangler": "3.10.1"
 	},
 	"publishConfig": {
