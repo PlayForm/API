@@ -1,12 +1,4 @@
-export declare const string: (params?: ({
-    errorMap?: import("zod").ZodErrorMap | undefined;
-    invalid_type_error?: string | undefined;
-    required_error?: string | undefined;
-    description?: string | undefined;
-} & {
-    coerce?: true | undefined;
-}) | undefined) => import("zod").ZodString;
-declare const _default: import("zod").ZodObject<{
+declare const _Object: import("zod").ZodObject<{
     DISCORD_APPLICATION_ID: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
     DISCORD_CLIENT_ID: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
     DISCORD_CLIENT_SECRET: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
@@ -25,4 +17,5 @@ declare const _default: import("zod").ZodObject<{
     DISCORD_PUBLIC_KEY?: string | undefined;
     DISCORD_TOKENS?: string | undefined;
 }>;
-export default _default;
+export type Type = Zod.infer<typeof _Object>;
+export type { Type as default };
