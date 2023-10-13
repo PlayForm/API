@@ -5,5 +5,5 @@ export type { Type as default };
 import type Zod from "zod";
 
 export const { default: Environment } = await import(
-	"../Object/Environment.js"
+	"../Variable/Environment.js"
 );
