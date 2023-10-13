@@ -1,10 +1,13 @@
-declare const _Object: import("zod").ZodObject<{
-    DISCORD_APPLICATION_ID: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
-    DISCORD_CLIENT_ID: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
-    DISCORD_CLIENT_SECRET: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
-    DISCORD_PUBLIC_KEY: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
-    DISCORD_TOKENS: import("zod").ZodDefault<import("zod").ZodOptional<import("zod").ZodString>>;
-}, "strip", import("zod").ZodTypeAny, {
+export type Type = Zod.infer<typeof Environment>;
+export type { Type as default };
+import type Zod from "zod";
+export declare const Environment: Zod.ZodObject<{
+    DISCORD_APPLICATION_ID: Zod.ZodDefault<Zod.ZodOptional<Zod.ZodString>>;
+    DISCORD_CLIENT_ID: Zod.ZodDefault<Zod.ZodOptional<Zod.ZodString>>;
+    DISCORD_CLIENT_SECRET: Zod.ZodDefault<Zod.ZodOptional<Zod.ZodString>>;
+    DISCORD_PUBLIC_KEY: Zod.ZodDefault<Zod.ZodOptional<Zod.ZodString>>;
+    DISCORD_TOKENS: Zod.ZodDefault<Zod.ZodOptional<Zod.ZodString>>;
+}, "strip", Zod.ZodTypeAny, {
     DISCORD_APPLICATION_ID: string;
     DISCORD_CLIENT_ID: string;
     DISCORD_CLIENT_SECRET: string;
@@ -17,5 +20,3 @@ declare const _Object: import("zod").ZodObject<{
     DISCORD_PUBLIC_KEY?: string | undefined;
     DISCORD_TOKENS?: string | undefined;
 }>;
-export type Type = Zod.infer<typeof _Object>;
-export type { Type as default };
