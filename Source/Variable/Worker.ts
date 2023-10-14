@@ -1,6 +1,6 @@
 class JSONResponse extends Response {
 	constructor(
-		// rome-ignore lint/suspicious/noExplicitAny:
+		// biome-ignore lint/suspicious/noExplicitAny:
 		body: any,
 		init: ResponseInit = {
 			headers: {
