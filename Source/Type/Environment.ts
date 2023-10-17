@@ -1,3 +1,7 @@
+/**
+ * @module Environment
+ *
+ */
 export type Type = Zod.infer<typeof Environment>;
 
 export type { Type as default };
