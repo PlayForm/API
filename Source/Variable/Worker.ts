@@ -6,7 +6,7 @@ class JSONResponse extends Response {
 			headers: {
 				"content-type": "application/json;charset=UTF-8",
 			},
-		},
+		}
 	) {
 		super(JSON.stringify(body), init);
 	}
@@ -47,7 +47,7 @@ class JSONResponse extends Response {
 			default:
 				return new JSONResponse(
 					{ error: "Unknown Type" },
-					{ status: 400 },
+					{ status: 400 }
 				);
 		}
 	}
@@ -62,7 +62,7 @@ class JSONResponse extends Response {
 export default {
 	async fetch(
 		request: Request,
-		{ DISCORD_PUBLIC_KEY } = Environment.parse(process.env),
+		{ DISCORD_PUBLIC_KEY } = Environment.parse(process.env)
 	) {
 		if (request.method === "POST") {
 			const isValidRequest = (
@@ -71,7 +71,7 @@ export default {
 				await request.clone().arrayBuffer(),
 				request["headers"].get("x-signature-ed25519") ?? "",
 				request["headers"].get("x-signature-timestamp") ?? "",
-				DISCORD_PUBLIC_KEY,
+				DISCORD_PUBLIC_KEY
 			);
 
 			if (!isValidRequest) {
