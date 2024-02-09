@@ -21,7 +21,7 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20240129.0",
 		"typescript-esbuild": "0.3.8",
-		"wrangler": "3.27.0"
+		"wrangler": "3.28.1"
 	},
 	"publishConfig": {
 		"access": "public"
