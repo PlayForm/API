@@ -16,7 +16,7 @@
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"itty-router": "4.2.1"
+		"itty-router": "4.2.2"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20240314.0",
