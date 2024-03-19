@@ -12,6 +12,7 @@
 	"main": "./Target/Object/Worker.js",
 	"types": "./Target/Object/Worker.d.ts",
 	"scripts": {
+		"Document": "TypeScriptDocument 'Source/**/*.ts'",
 		"dev": "wrangler dev",
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
 	},
@@ -20,6 +21,7 @@
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20240314.0",
+		"typescript-document": "0.0.2",
 		"typescript-esbuild": "0.4.3",
 		"wrangler": "3.34.2"
 	},
