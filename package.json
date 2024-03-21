@@ -20,7 +20,7 @@
 		"itty-router": "4.2.2"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "4.20240314.0",
+		"@cloudflare/workers-types": "4.20240320.1",
 		"typescript-document": "0.0.4",
 		"typescript-esbuild": "0.4.5",
 		"wrangler": "3.35.0"
