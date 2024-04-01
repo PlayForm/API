@@ -17,13 +17,15 @@
 		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"itty-router": "4.2.2"
+		"itty-router": "5.0.4"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "4.20240320.1",
-		"typescript-document": "0.0.7",
-		"typescript-esbuild": "0.4.9",
-		"wrangler": "3.39.0"
+		"@cloudflare/workers-types": "4.20240329.0",
+		"@playform/build": "0.0.1",
+		"wrangler": "3.41.0"
+	},
+	"optionalDependencies": {
+		"@playform/document": "0.0.2"
 	},
 	"publishConfig": {
 		"access": "public"
