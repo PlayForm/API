@@ -14,7 +14,7 @@
 	"scripts": {
 		"Document": "Document 'Source/**/*.ts'",
 		"dev": "wrangler dev",
-		"prepublishOnly": "Build 'Source/**/*.ts'"
+		"Build": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"itty-router": "5.0.5"
