@@ -14,15 +14,15 @@
 	"scripts": {
 		"Document": "Document 'Source/**/*.ts'",
 		"dev": "wrangler dev",
-		"Build": "Build 'Source/**/*.ts'"
+		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"itty-router": "5.0.8"
+		"itty-router": "5.0.9"
 	},
 	"devDependencies": {
 		"@playform/build": "0.0.2",
-		"@cloudflare/workers-types": "4.20240402.0",
-		"wrangler": "3.44.0"
+		"@cloudflare/workers-types": "4.20240403.0",
+		"wrangler": "3.45.0"
 	},
 	"optionalDependencies": {
 		"@playform/document": "0.0.3"
