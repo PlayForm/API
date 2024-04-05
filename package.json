@@ -19,9 +19,18 @@
 		"itty-router": "5.0.9"
 	},
 	"devDependencies": {
+<<<<<<< HEAD
 		"@cloudflare/workers-types": "4.20240404.0",
 		"@playform/build": "0.0.5",
 		"wrangler": "3.47.1"
+=======
+		"@cloudflare/workers-types": "4.20240403.0",
+		"@playform/build": "0.0.2",
+		"wrangler": "3.47.0"
+	},
+	"optionalDependencies": {
+		"@playform/document": "0.0.3"
+>>>>>>> d06a385422aa987fad41169b9243baac402302d5
 	},
 	"publishConfig": {
 		"access": "public"
