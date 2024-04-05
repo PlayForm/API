@@ -86,6 +86,6 @@ export default {
 
 import type { Request, ResponseInit } from "@cloudflare/workers-types";
 
-export const { default: Environment } = await import("./Environment.js");
+export const { default: Environment } = await import("@Variable/Environment.js");
 
 export const { Response } = await import("@cloudflare/workers-types");
