@@ -17,7 +17,7 @@
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"itty-router": "5.0.15"
+		"itty-router": "5.0.16"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20240419.0",
