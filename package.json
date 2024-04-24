@@ -5,8 +5,8 @@
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "Source/Open",
-		"email": "Source/Open@Playform.Cloud",
-		"url": "HTTPS://Playform.Cloud"
+		"email": "Source/Open@PlayForm.Cloud",
+		"url": "HTTPS://PlayForm.Cloud"
 	},
 	"type": "module",
 	"main": "./Target/Object/Worker.js",
