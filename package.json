@@ -17,11 +17,11 @@
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
-		"itty-router": "5.0.16"
+		"itty-router": "5.0.17"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20240423.0",
-		"@playform/build": "0.0.7",
+		"@playform/build": "0.0.8",
 		"@playform/document": "0.0.6",
 		"wrangler": "3.52.0"
 	},
