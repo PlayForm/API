@@ -12,7 +12,6 @@
 	"main": "./Target/Object/Worker.js",
 	"types": "./Target/Object/Worker.d.ts",
 	"scripts": {
-		"Document": "Document 'Source/**/*.ts'",
 		"dev": "wrangler dev",
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
