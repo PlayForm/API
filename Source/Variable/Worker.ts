@@ -1,3 +1,5 @@
+import type { Request, ResponseInit } from "@cloudflare/workers-types";
+
 class JSONResponse extends Response {
 	constructor(
 		// biome-ignore lint/suspicious/noExplicitAny:
@@ -83,8 +85,6 @@ export default {
 		return (await import("itty-router")).Router().handle(request);
 	},
 };
-
-import type { Request, ResponseInit } from "@cloudflare/workers-types";
 
 export const { default: Environment } = await import(
 	"@Variable/Environment.js"
