@@ -31,6 +31,7 @@ export declare const Environment: import("zod").ZodObject<{
 export declare const Response: {
     new (body?: import("@cloudflare/workers-types").BodyInit | null, init?: ResponseInit): import("@cloudflare/workers-types").Response;
     prototype: import("@cloudflare/workers-types").Response;
+    error(): import("@cloudflare/workers-types").Response;
     redirect(url: string, status?: number): import("@cloudflare/workers-types").Response;
     json(any: any, maybeInit?: ResponseInit | import("@cloudflare/workers-types").Response): import("@cloudflare/workers-types").Response;
 };
