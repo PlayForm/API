@@ -20,7 +20,7 @@
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20250404.0",
-		"@playform/build": "0.2.1",
+		"@playform/build": "0.2.2",
 		"wrangler": "4.7.1"
 	},
 	"publishConfig": {
