@@ -5,8 +5,8 @@
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "Source/Open",
-		"email": "Source/Open@PlayForm.LTD",
-		"url": "HTTPS://PlayForm.LTD"
+		"email": "Source/Open@PlayForm.Cloud",
+		"url": "HTTPS://PlayForm.Cloud"
 	},
 	"type": "module",
 	"main": "./Target/Object/Worker.js",
@@ -19,9 +19,9 @@
 		"itty-router": "6.0.0"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "4.20250425.0",
+		"@cloudflare/workers-types": "4.20250505.0",
 		"@playform/build": "0.2.3",
-		"wrangler": "4.13.2"
+		"wrangler": "4.14.1"
 	},
 	"publishConfig": {
 		"access": "public",
