@@ -6,7 +6,7 @@
 	"author": {
 		"name": "Source/Open",
 		"email": "Source/Open@PlayForm.Cloud",
-		"url": "HTTPS://PlayForm.Cloud"
+		"url": "https://PlayForm.Cloud"
 	},
 	"type": "module",
 	"main": "./Target/Object/Worker.js",
