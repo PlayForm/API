@@ -19,7 +19,7 @@
 		"itty-router": "6.0.0"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "4.20260212.0",
+		"@cloudflare/workers-types": "4.20260213.0",
 		"@playform/build": "0.3.0",
 		"wrangler": "4.65.0"
 	},
